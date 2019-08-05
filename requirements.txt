@@ -1,9 +1,0 @@
-numpy
-scipy
-matplotlib
-pandas
-nltk
-gensim
-spacy
-pyLDAvis
-pystan
