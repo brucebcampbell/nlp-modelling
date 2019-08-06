@@ -76,17 +76,15 @@ a gallery with `sphinx-gallery`.
 
 .. _sphx_glr_auto_examples_sg_tutorial:
 
-Sphinx-Gallery tutorial
+Gallery
 -----------------------
 
-This folder contains a tutorial to demonstrate some functionality of
-sphinx-gallery. It is a quick tour of features but doesn't cover
-everything that you can do with rST.
+Gallery of examples and plots.
 
 
 .. raw:: html
 
-    <div class="sphx-glr-thumbcontainer" tooltip="One of the most important components of any package is its documentation. For packages that inv...">
+    <div class="sphx-glr-thumbcontainer" tooltip="We use the excellent sphinx-gallery to provide a visual tour of some of the features of pytma. ...">
 
 .. only:: html
 
