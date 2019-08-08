@@ -5,7 +5,7 @@
 
 Computation times
 =================
-**00:00.968** total execution time for **auto_examples_model_fitting** files:
+**00:00.984** total execution time for **auto_examples_model_fitting** files:
 
-- **00:00.617**: :ref:`sphx_glr_auto_examples_model_fitting_plot_function_stability.py` (``plot_function_stability.py``)
-- **00:00.351**: :ref:`sphx_glr_auto_examples_model_fitting_plot_function_fit.py` (``plot_function_fit.py``)
+- **00:00.622**: :ref:`sphx_glr_auto_examples_model_fitting_plot_function_stability.py` (``plot_function_stability.py``)
+- **00:00.362**: :ref:`sphx_glr_auto_examples_model_fitting_plot_function_fit.py` (``plot_function_fit.py``)
