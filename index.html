@@ -185,6 +185,75 @@
 </ul>
 </div>
 </div>
+<div class="section" id="module-scripts.LDAWorkflow">
+<span id="pytma-main"></span><h1>pytma main<a class="headerlink" href="#module-scripts.LDAWorkflow" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="module-pytma.Featurize">
+<span id="pytma-featureize"></span><h1>pytma Featureize<a class="headerlink" href="#module-pytma.Featurize" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pytma.Featurize.Featurize">
+<em class="property">class </em><code class="sig-prename descclassname">pytma.Featurize.</code><code class="sig-name descname">Featurize</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Featurize.Featurize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for featurizing text.  BOW, tf-idf, vector embeddings</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-pytma.Lemmatize">
+<span id="pytma-lemmatize"></span><h1>pytma Lemmatize<a class="headerlink" href="#module-pytma.Lemmatize" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="pytma.Lemmatize.Lemmatize">
+<em class="property">class </em><code class="sig-prename descclassname">pytma.Lemmatize.</code><code class="sig-name descname">Lemmatize</code><a class="headerlink" href="#pytma.Lemmatize.Lemmatize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lematizer class:  Wordnet or spacy</p>
+<dl class="method">
+<dt id="pytma.Lemmatize.Lemmatize.get_nltk_POS">
+<code class="sig-name descname">get_nltk_POS</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Lemmatize.Lemmatize.get_nltk_POS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the part of speech</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>word</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pytma.Lemmatize.Lemmatize.lemmatize_nltk_with_POS">
+<code class="sig-name descname">lemmatize_nltk_with_POS</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Lemmatize.Lemmatize.lemmatize_nltk_with_POS" title="Permalink to this definition">¶</a></dt>
+<dd><p>lemmatizes with nltk - using the POS</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="pytma.Lemmatize.Lemmatize.lemmatize_spacy">
+<code class="sig-name descname">lemmatize_spacy</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Lemmatize.Lemmatize.lemmatize_spacy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lematizes using spacy</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-pytma.Parse">
+<span id="pytma-parse"></span><h1>pytma Parse<a class="headerlink" href="#module-pytma.Parse" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="module-pytma.POSTag">
+<span id="pytma-postag"></span><h1>pytma POSTag<a class="headerlink" href="#module-pytma.POSTag" title="Permalink to this headline">¶</a></h1>
+</div>
 
 
            </div>
