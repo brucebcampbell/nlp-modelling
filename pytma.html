@@ -262,46 +262,6 @@
 </div>
 <div class="section" id="module-pytma.Preprocess">
 <span id="pytma-preprocess-module"></span><h2>pytma.Preprocess module<a class="headerlink" href="#module-pytma.Preprocess" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="pytma.Preprocess.get_transcription_data">
-<code class="sig-prename descclassname">pytma.Preprocess.</code><code class="sig-name descname">get_transcription_data</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Preprocess.get_transcription_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function that returns medical transcription data
-This data was scraped from mtsamples.com
-data schema</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>description: Short description of transcription</p></li>
-<li><p>medical_specialty: Medical specialty classification of transcription</p></li>
-<li><p>sample_name: Transcription title</p></li>
-<li><p>transcription: Sample medical transcriptions</p></li>
-<li><p>keywords: Relevant keywords from transcription</p></li>
-</ul>
-</div></blockquote>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>Returns</strong></dt><dd></dd>
-<dt><strong>medical_df</strong><span class="classifier">pandas data frame with transcription data.</span></dt><dd></dd>
-<dt><strong>——-</strong></dt><dd></dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="function">
-<dt id="pytma.Preprocess.nltk_init">
-<code class="sig-prename descclassname">pytma.Preprocess.</code><code class="sig-name descname">nltk_init</code><span class="sig-paren">(</span><em class="sig-param">datasets</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Preprocess.nltk_init" title="Permalink to this definition">¶</a></dt>
-<dd><p>Function that initializes NLTK data sets</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>sets</strong><span class="classifier">list of data sets to get.</span></dt><dd><p>[‘stopwords’,’punkt’,’averaged_perceptron_tagger’,’wordnet’]</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
 <dl class="class">
 <dt id="pytma.Preprocess.Model">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.Preprocess.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">func=&lt;function cumgauss&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Preprocess.Model" title="Permalink to this definition">¶</a></dt>
