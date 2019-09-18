@@ -24,6 +24,7 @@ install:
 
 script:
 #- flake8 --ignore N802,N806 `find . -name \*.py | grep -v setup.py | grep -v version.py | grep -v __init__.py | grep -v /doc/`
+- python -m spacy download en_core_web_sm
 - mkdir for_test
 - cd $TRAVIS_BUILD_DIR/pytma
 - py.test --pyargs pytma --cov-report term-missing --cov=pytma
