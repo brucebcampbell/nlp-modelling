@@ -1,3 +1,4 @@
+scikit-learn
 numpy
 scipy
 matplotlib
@@ -7,3 +8,5 @@ gensim
 spacy
 pyLDAvis
 pystan
+wget
+stanfordnlp
