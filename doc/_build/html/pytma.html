@@ -37,6 +37,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="_static/gallery-dataframe.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -183,7 +185,7 @@
 <dl class="class">
 <dt id="pytma.Lemmatize.Lemmatize">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.Lemmatize.</code><code class="sig-name descname">Lemmatize</code><a class="headerlink" href="#pytma.Lemmatize.Lemmatize" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Lematizer class:  Wordnet or spacy</p>
 <dl class="method">
 <dt id="pytma.Lemmatize.Lemmatize.get_nltk_POS">
@@ -240,16 +242,38 @@
 <dl class="class">
 <dt id="pytma.Parse.ParseText">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.Parse.</code><code class="sig-name descname">ParseText</code><span class="sig-paren">(</span><em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Parse.ParseText" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Class for parsing text.  Uses spacey.</p>
 <dl class="method">
 <dt id="pytma.Parse.ParseText.chart_parse">
 <code class="sig-name descname">chart_parse</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Parse.ParseText.chart_parse" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Chart parse
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pytma.Parse.ParseText.dependency_parse">
+<code class="sig-name descname">dependency_parse</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Parse.ParseText.dependency_parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dependency parser : Analyzes the grammatical structure of a sentence,
+establishing relationships between “head” words and words which modify those heads
+:return:</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="pytma.Parse.ParseText.display_parse">
 <code class="sig-name descname">display_parse</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Parse.ParseText.display_parse" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>sets up web page with parse diagram
+:return:</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="pytma.Parse.ParseText.noun_chunks">
+<code class="sig-name descname">noun_chunks</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Parse.ParseText.noun_chunks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Looks for n-gram noun phrases
+Think of noun chunks as a noun plus the words describing the noun –
+for example, “the lavish green grass” or “the world’s largest tech fund”
+:return:</p>
+</dd></dl>
 
 </dd></dl>
 
@@ -258,25 +282,30 @@
 <span id="pytma-postag-module"></span><h2>pytma.POSTag module<a class="headerlink" href="#module-pytma.POSTag" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="pytma.POSTag.POStag">
-<em class="property">class </em><code class="sig-prename descclassname">pytma.POSTag.</code><code class="sig-name descname">POStag</code><a class="headerlink" href="#pytma.POSTag.POStag" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property">class </em><code class="sig-prename descclassname">pytma.POSTag.</code><code class="sig-name descname">POStag</code><span class="sig-paren">(</span><em class="sig-param">text</em>, <em class="sig-param">DEBUG=False</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.POSTag.POStag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="pytma.POSTag.POStag.get_nltk_POS">
-<code class="sig-name descname">get_nltk_POS</code><span class="sig-paren">(</span><em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.POSTag.POStag.get_nltk_POS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_nltk_POS</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">word</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.POSTag.POStag.get_nltk_POS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="pytma.POSTag.POStag.transform">
+<code class="sig-name descname">transform</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.POSTag.POStag.transform" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 </div>
-<div class="section" id="pytma-predict-module">
-<h2>pytma.Predict module<a class="headerlink" href="#pytma-predict-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-pytma.Predict">
+<span id="pytma-predict-module"></span><h2>pytma.Predict module<a class="headerlink" href="#module-pytma.Predict" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-pytma.Preprocess">
 <span id="pytma-preprocess-module"></span><h2>pytma.Preprocess module<a class="headerlink" href="#module-pytma.Preprocess" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="pytma.Preprocess.Model">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.Preprocess.</code><code class="sig-name descname">Model</code><span class="sig-paren">(</span><em class="sig-param">func=&lt;function cumgauss&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Preprocess.Model" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for fitting cumulative Gaussian functions to data</p>
 <dl class="method">
 <dt id="pytma.Preprocess.Model.fit">
@@ -306,7 +335,7 @@ experiment</p>
 <dl class="class">
 <dt id="pytma.Preprocess.Fit">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.Preprocess.</code><code class="sig-name descname">Fit</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">params</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Preprocess.Fit" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Class for representing a fit of a model to data</p>
 <dl class="method">
 <dt id="pytma.Preprocess.Fit.predict">
@@ -433,12 +462,13 @@ evaluated at all points in <cite>x</cite>.</p>
 <dl class="class">
 <dt id="pytma.Sentiment.Sentiment">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.Sentiment.</code><code class="sig-name descname">Sentiment</code><a class="headerlink" href="#pytma.Sentiment.Sentiment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Sentiment analyzer.  Supervised via NaiveBayes or unsupervised via Valence method.</p>
 <dl class="method">
-<dt id="pytma.Sentiment.Sentiment.naiveBayesSentiment">
-<code class="sig-name descname">naiveBayesSentiment</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Sentiment.Sentiment.naiveBayesSentiment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Supervised sentiment analysis.</p>
+<dt id="pytma.Sentiment.Sentiment.naiveBayesSentimentFit">
+<code class="sig-name descname">naiveBayesSentimentFit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Sentiment.Sentiment.naiveBayesSentimentFit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Supervised sentiment analysis - uses nltk to fit Naive Bayes .
+Call naiveBayesSentimentPredict to predict  using the latest fit model.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>text</strong> – </p>
@@ -450,6 +480,20 @@ evaluated at all points in <cite>x</cite>.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="pytma.Sentiment.Sentiment.naiveBayesSentimentPredict">
+<code class="sig-name descname">naiveBayesSentimentPredict</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Sentiment.Sentiment.naiveBayesSentimentPredict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Predicts sentiment.  Call naiveBayesSentimentFit on a corpus first otherwise
+an error will be thrown.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>text</strong> – </p>
+</dd>
+<dt class="field-even">Return predicted sentiment</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="pytma.Sentiment.Sentiment.valenceSentiment">
 <code class="sig-name descname">valenceSentiment</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">text</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.Sentiment.Sentiment.valenceSentiment" title="Permalink to this definition">¶</a></dt>
 <dd><p>Unsupervised sentiment analysis.</p>
@@ -457,9 +501,8 @@ evaluated at all points in <cite>x</cite>.</p>
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>text</strong> – </p>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p></p>
-</dd>
+<dt class="field-even">Return sentiment polarity scores</dt>
+<dd class="field-even"><p></p></dd>
 </dl>
 </dd></dl>
 
@@ -474,7 +517,7 @@ evaluated at all points in <cite>x</cite>.</p>
 <dl class="class">
 <dt id="pytma.TopicModel.LDAAnalysis">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.TopicModel.</code><code class="sig-name descname">LDAAnalysis</code><span class="sig-paren">(</span><em class="sig-param">docs</em>, <em class="sig-param">num_topics=5</em>, <em class="sig-param">chunksize=500</em>, <em class="sig-param">passes=20</em>, <em class="sig-param">iterations=400</em>, <em class="sig-param">eval_every=1</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.TopicModel.LDAAnalysis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="pytma.TopicModel.LDAAnalysis.coherence_values">
 <code class="sig-name descname">coherence_values</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">limit=40</em>, <em class="sig-param">step=6</em>, <em class="sig-param">start=2</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.TopicModel.LDAAnalysis.coherence_values" title="Permalink to this definition">¶</a></dt>
@@ -499,7 +542,7 @@ coherence_values : Coherence values corresponding to the LDA model with respecti
 
 <dl class="method">
 <dt id="pytma.TopicModel.LDAAnalysis.fit">
-<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.TopicModel.LDAAnalysis.fit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em>, <em class="sig-param">dictionary_filter_extremes_no_below=10</em>, <em class="sig-param">dictionary_filter_extremes_no_above=0.2</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.TopicModel.LDAAnalysis.fit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
@@ -512,7 +555,7 @@ coherence_values : Coherence values corresponding to the LDA model with respecti
 <dl class="class">
 <dt id="pytma.TopicModel.NNMFTopicAnalysis">
 <em class="property">class </em><code class="sig-prename descclassname">pytma.TopicModel.</code><code class="sig-name descname">NNMFTopicAnalysis</code><span class="sig-paren">(</span><em class="sig-param">docs</em>, <em class="sig-param">num_samples=400</em>, <em class="sig-param">num_features=1000</em>, <em class="sig-param">num_topics=10</em>, <em class="sig-param">top_words=20</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.TopicModel.NNMFTopicAnalysis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="method">
 <dt id="pytma.TopicModel.NNMFTopicAnalysis.fit">
 <code class="sig-name descname">fit</code><span class="sig-paren">(</span><em class="sig-param">self</em><span class="sig-paren">)</span><a class="headerlink" href="#pytma.TopicModel.NNMFTopicAnalysis.fit" title="Permalink to this definition">¶</a></dt>

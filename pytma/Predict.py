@@ -5,11 +5,30 @@
 ##Text Classification Model using TF-IDF.
 #First, import the MultinomialNB module and create a Multinomial Naive Bayes classifier object using MultinomialNB() function.
 
-from sklearn.naive_bayes import MultinomialNB
-#Import scikit-learn metrics module for accuracy calculation
-from sklearn import metrics
+from __future__ import print_function
 
+import logging
+import sys
+from optparse import OptionParser
+from time import time
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn import metrics
+from sklearn.datasets import fetch_20newsgroups
+from sklearn.feature_extraction.text import HashingVectorizer
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.linear_model import PassiveAggressiveClassifier
+from sklearn.linear_model import Perceptron
+from sklearn.linear_model import RidgeClassifier
+from sklearn.linear_model import SGDClassifier
 from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import BernoulliNB
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.neighbors import NearestCentroid
+from sklearn.svm import LinearSVC
+from sklearn.utils.extmath import density
 
 if __name__ == '__main__':
     # This will be the unit test
@@ -21,31 +40,6 @@ if __name__ == '__main__':
     clf = MultinomialNB().fit(X_train, y_train)
     predicted= clf.predict(X_test)
     print("MultinomialNB Accuracy:",metrics.accuracy_score(y_test, predicted))
-
-    from __future__ import print_function
-
-    import logging
-    import numpy as np
-    from optparse import OptionParser
-    import sys
-    from time import time
-    import matplotlib.pyplot as plt
-
-    from sklearn.datasets import fetch_20newsgroups
-    from sklearn.feature_extraction.text import TfidfVectorizer
-    from sklearn.feature_extraction.text import HashingVectorizer
-    from sklearn.feature_selection import SelectKBest, chi2
-    from sklearn.linear_model import RidgeClassifier
-    from sklearn.svm import LinearSVC
-    from sklearn.linear_model import SGDClassifier
-    from sklearn.linear_model import Perceptron
-    from sklearn.linear_model import PassiveAggressiveClassifier
-    from sklearn.naive_bayes import BernoulliNB, MultinomialNB
-    from sklearn.neighbors import KNeighborsClassifier
-    from sklearn.neighbors import NearestCentroid
-    from sklearn.utils.extmath import density
-    from sklearn import metrics
-    import logging
 
     # Display progress logs on stdout
     logging.basicConfig(level=logging.INFO,
